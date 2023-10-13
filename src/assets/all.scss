@@ -1,0 +1,10 @@
+// required
+@import "~bootstrap/scss/functions";
+@import "./helpers/variables";
+@import "~bootstrap/scss/mixins";
+
+// Custom.scss
+// Option A: Include all of Bootstrap
+@import "~bootstrap/scss/bootstrap";
+
+// Then add additional custom code here

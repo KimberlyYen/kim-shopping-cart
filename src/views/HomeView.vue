@@ -5,14 +5,29 @@
   </div>
 </template>
 
-<script>
+<script >
 // @ is an alias to /src
 import HelloWorld from '@/components/HelloWorld.vue'
+import { onMounted, ref } from 'vue'
 
 export default {
   name: 'HomeView',
   components: {
     HelloWorld
+  },
+
+  setup () {
+    const enviroment = ref(process.env.VUE_APP_PATH)
+    onMounted(() => {
+      console.log(process.env.VUE_APP_PATH)
+      console.log('message')
+      console.log(enviroment.value)
+    })
+
+    return {
+      enviroment
+    }
   }
 }
+
 </script>
